@@ -1,23 +1,12 @@
 # 2 X n 타일링
-
+## 설명
 dp로 풀리는 문제이다.
 
 dp[3] 는 dp[2] 에 | 블럭을  추가한 것과 dp[1] 에 ㅡ 블럭을 2개 쌓은 것을 추가한 것과 같다. 
+
 (dp[1] 에 || 블럭을 추가한 것은 dp[2]에 | 추가 한 것과 중복되어 고려하지 않는다.)
-```python
-def solution(n):
-    f = 1 
-    s = 2
-    t = 0
-    
-    if n == 1:
-        return f
-    if n == 2:
-        return s
-    
-    for i in range(3, n + 1):
-        t = (f + s) % 1000000007
-        f = s
-        s = t
-    return t
-```
+## 처음 생각한 방식
+처음에는 높이가 고정되어 있어서 너비 n 에서 세로로 한 칸 2 x 1 과 가로 1 x 2 를 조합하면 되는 건 줄 알았는데 막상 해보니까 시간초과가 나서 안됬다. 안되는 이유는 모르겠음 -.-
+
+## 링크
+https://school.programmers.co.kr/learn/courses/30/lessons/12900
