@@ -46,7 +46,7 @@ def solution(num_list):
     return num_list
 ```
 
-### 인상 깊은 풀이
+### 인상깊은 풀이
 
 ```python
 def solution(num_list):
